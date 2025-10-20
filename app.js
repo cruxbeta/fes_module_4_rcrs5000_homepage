@@ -2,6 +2,22 @@
 // service id: service_rcrs500worldwide
 // user id: Weg1xuw2LnYP_gJTQ
 
+let isModalOpen = false;
+let contrastToggle = false;
+
+
+//        MODAL CONTACT
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classList += ` dark-theme`;
+    }
+    else {
+        document.body.classList.remove(`dark-theme`);
+    }
+}
+
 //        MODAL CONTACT
 
 function contact(event) {
@@ -28,7 +44,6 @@ function contact(event) {
     });
 }
 
-let isModalOpen = false;
 function toggleModal() {
     if (isModalOpen) {
         isModalOpen = false;

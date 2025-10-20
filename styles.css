@@ -28,6 +28,7 @@ a {
 
 section {
   background-color: rgba(245, 245, 245);
+  transition: all 300ms ease;
 }
 
 .container {
@@ -74,7 +75,7 @@ button {
 
 .click:hover {
   transform: scale(1.1);
-  background-color: #6f59ab;
+  background-color: #8169ff;
 }
 
 .click:active {
@@ -159,17 +160,59 @@ label {
 nav,
 .scroll,
 .header {
-    opacity: 1;
-    visibility: visible;
-    transition: all 600ms 800ms;
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
 }
 
 .modal--open nav,
 .modal__open .scroll,
 .modal--open .header {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 400ms;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
+}
+
+/* 
+
+    TOGGLE CONTRAST CLASSES 
+
+*/
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para {
+  color: #fff;
+}
+
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme #logo-dark {
+  filter: invert(1);
+}
+
+.dark-theme .scroll__icon {
+  border-color: #fff;
+}
+
+.dark-theme .link__hover-effect--black:after,
+.dark-theme .scroll__icon:after {
+  background-color: #fff;
+}
+
+.dark-theme .mail__btn {
+  background-color: #fff;
+  color: #242424;
+}
+
+.dark-theme .title__img {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(70%) saturate(386%)
+    hue-rotate(214deg) brightness(89%) contrast(94%);
 }
 
 /* 
@@ -203,8 +246,19 @@ nav {
   font-weight: 700;
 }
 
-.fa-adjust {
+.fa-circle-half-stroke {
   font-size: 20px;
+  color: #242424;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.fa-circle-half-stroke:hover {
+  transform: scale(1.2);
+}
+
+.fa-circle-half-stroke:active {
+  transform: scale(0.8);
 }
 
 /* 
@@ -228,12 +282,12 @@ nav {
   transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
-.modal--open .modal__about, 
+.modal--open .modal__about,
 .modal--open .modal__contact {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
-.modal--open .modal{
+.modal--open .modal {
   z-index: 60;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   visibility: visible;
@@ -429,7 +483,7 @@ nav {
 }
 
 .social__link {
-  background-color: #8169ff;
+  background-color: #6f59ab;
   color: white;
   padding: 6px;
   width: 32px;
@@ -601,4 +655,84 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: white;
+}
+
+/* 
+
+    SHAPES 
+baseline placement outline for smaller svgs
+1st row height = 35vh  
+2nd row height = 70vh  
+3rd row height = 95vh  
+
+1st column width = 5vw
+2nd column width = 50vw
+3rd column width = 80vw
+*/
+
+.shape {
+  position: fixed;
+}
+.shape--0 {
+  transform: scale(0.2);
+  top: 3vh;
+  left: 5vw;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(41%) saturate(4688%)
+    hue-rotate(339deg) brightness(93%) contrast(100%);
+}
+.shape--1 {
+  transform: scale(0.15) rotate(15deg);
+  top: 0vh;
+  left: 45vw;
+  filter: brightness(0) saturate(100%) invert(62%) sepia(55%) saturate(2568%)
+    hue-rotate(338deg) brightness(96%) contrast(95%);
+}
+.shape--2 {
+  transform: scale(0.3);
+  top: 3vh;
+  left: 80vw;
+  filter: brightness(0) saturate(100%) invert(50%) sepia(2%) saturate(374%)
+    hue-rotate(96deg) brightness(103%) contrast(96%);
+}
+.shape--3 {
+  transform: scale(0.3) rotate(280deg);
+  top: 35vh;
+  left: 7vw;
+  filter: brightness(0) saturate(100%) invert(50%) sepia(2%) saturate(374%)
+    hue-rotate(96deg) brightness(90%) contrast(96%);
+}
+.shape--4 {
+  transform: scale(0.18);
+  top: 40vh;
+  left: 46vw;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(36%) saturate(803%)
+    hue-rotate(4deg) brightness(103%) contrast(89%);
+}
+.shape--5 {
+  transform: scale(0.22);
+  top: 35vh;
+  left: 78vw;
+  filter: brightness(0) saturate(100%) invert(43%) sepia(99%) saturate(511%)
+    hue-rotate(168deg) brightness(92%) contrast(94%);
+}
+.shape--6 {
+  transform: scale(0.15);
+  top: 67vh;
+  left: 5vw;
+  filter: brightness(0) saturate(100%) invert(33%) sepia(88%) saturate(444%)
+    hue-rotate(92deg) brightness(96%) contrast(96%);
+}
+.shape--7 {
+  transform: scale(0.23);
+  top: 74vh;
+  left: 42vw;
+  filter: brightness(0) saturate(100%) invert(26%) sepia(13%) saturate(4461%)
+    hue-rotate(230deg) brightness(92%) contrast(102%);
+}
+.shape--8 {
+  transform: scale(0.15) rotate(-20deg);
+  top: 70vh;
+  left: 80vw;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(27%) saturate(1059%)
+    hue-rotate(243deg) brightness(91%) contrast(94%);
 }
