@@ -672,67 +672,71 @@ baseline placement outline for smaller svgs
 
 .shape {
   position: fixed;
+  z-index: 0;
 }
 .shape--0 {
-  transform: scale(0.2);
-  top: 3vh;
+  width: 100px;
+  top: 7vh;
   left: 5vw;
   filter: brightness(0) saturate(100%) invert(18%) sepia(41%) saturate(4688%)
     hue-rotate(339deg) brightness(93%) contrast(100%);
 }
 .shape--1 {
-  transform: scale(0.15) rotate(15deg);
-  top: 0vh;
+  width: 90px;
+  transform: rotate(15deg);
+  top: 10vh;
   left: 45vw;
   filter: brightness(0) saturate(100%) invert(62%) sepia(55%) saturate(2568%)
     hue-rotate(338deg) brightness(96%) contrast(95%);
 }
 .shape--2 {
-  transform: scale(0.3);
-  top: 3vh;
-  left: 80vw;
+  width: 200px;
+  top: 8vh;
+  left: 85vw;
   filter: brightness(0) saturate(100%) invert(50%) sepia(2%) saturate(374%)
     hue-rotate(96deg) brightness(103%) contrast(96%);
 }
 .shape--3 {
-  transform: scale(0.3) rotate(280deg);
-  top: 35vh;
-  left: 7vw;
+  width: 180px;
+  transform: rotate(280deg);
+  top: 40vh;
+  left: 5vw;
   filter: brightness(0) saturate(100%) invert(50%) sepia(2%) saturate(374%)
     hue-rotate(96deg) brightness(90%) contrast(96%);
 }
 .shape--4 {
-  transform: scale(0.18);
-  top: 40vh;
-  left: 46vw;
+  width: 95px;
+  top: 52vh;
+  left: 50vw;
   filter: brightness(0) saturate(100%) invert(82%) sepia(36%) saturate(803%)
     hue-rotate(4deg) brightness(103%) contrast(89%);
 }
 .shape--5 {
-  transform: scale(0.22);
-  top: 35vh;
-  left: 78vw;
+  width: 114px;
+  top: 48vh;
+  left: 85vw;
   filter: brightness(0) saturate(100%) invert(43%) sepia(99%) saturate(511%)
     hue-rotate(168deg) brightness(92%) contrast(94%);
 }
 .shape--6 {
-  transform: scale(0.15);
-  top: 67vh;
+  width: 120px;
+  top: 83vh;
   left: 5vw;
   filter: brightness(0) saturate(100%) invert(33%) sepia(88%) saturate(444%)
     hue-rotate(92deg) brightness(96%) contrast(96%);
 }
 .shape--7 {
-  transform: scale(0.23);
-  top: 74vh;
-  left: 42vw;
+  width: 112px;
+  top: 83vh;
+  left: 50vw;
   filter: brightness(0) saturate(100%) invert(26%) sepia(13%) saturate(4461%)
     hue-rotate(230deg) brightness(92%) contrast(102%);
 }
 .shape--8 {
-  transform: scale(0.15) rotate(-20deg);
-  top: 70vh;
-  left: 80vw;
+  width: 90px;
+  transform: rotate(-20deg);
+  top: 83vh;
+  left: 87vw;
   filter: brightness(0) saturate(100%) invert(45%) sepia(27%) saturate(1059%)
     hue-rotate(243deg) brightness(91%) contrast(94%);
 }
