@@ -2,6 +2,8 @@
 // service id: service_rcrs500worldwide
 // user id: Weg1xuw2LnYP_gJTQ
 
+//        MODAL CONTACT
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(`.modal__overlay--loading`);
@@ -33,5 +35,5 @@ function toggleModal() {
         return document.body.classList.remove(`modal--open`);
     }
     isModalOpen = true;
-    document.classList += ` modal--open`;
+    document.body.classList += ` modal--open`;
 }
