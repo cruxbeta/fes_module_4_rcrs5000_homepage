@@ -14,18 +14,18 @@ function moveBackground(event) {
 
     for (let i  = 0; i< shapes.length; i++) {
         const isOdd = i % 2 !== 0;
-        const coolInt = isOdd ? -1 : 1;
-        shapes[i].style.transform = `translate(${x * oddInteger}px, ${y * oddInteger}px)`,`rotate(${x * oddInteger})`;
+        const boolInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt}deg)`;
     }
 }
 
-// //          BUTTON MENU
-// function openMenu() {
-//     document.body.classList += ` menu--open`;
-// }
-// function closeMenu() {
-//     document.body.classList.remove(`menu--open`)
-// }
+//          BUTTON MENU
+function openMenu() {
+    document.body.classList += ` menu--open`;
+}
+function closeMenu() {
+    document.body.classList.remove(`menu--open`)
+}
 
 //        MODAL CONTACT
 
@@ -55,7 +55,7 @@ function contact(event) {
     )
     .then(() => {
       loading.classList.remove(` modal__overlay--visible`);
-      success.classList += ` modal__overlay--visible`;
+      success.body.classList += ` modal__overlay--visible`;
     })
     .catch(() => {
       loading.classList.remove(` modal__overlay--visible`);
