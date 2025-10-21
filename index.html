@@ -24,43 +24,62 @@
   <body>
     <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
-        <figure>
-          <img
-            id="logo-dark"
-            src="./images/RCRS5000 (240x 45 px) scalable black.svg"
-            alt="blackRCRS5000"
-          />
-        </figure>
-        <ul class="nav__link--list">
-          <li class="nav__link" onclick="toggleModal()">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >About</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Projects</a
-            >
-          </li>
-          <li class="nav__link" onclick="toggleModal()">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Contact</a
-            >
-          </li>
-          <li class="nav__link" onclick="toggleContrast()">
-            <a
-              href="#"
-              class="adjust"
-              ><i class="fa-solid fa-circle-half-stroke"></i
-            ></a>
-          </li>
-        </ul>
+        <div class="nav__container">
+        <div class="row">
+            <figure>
+            <img
+                id="logo-dark"
+                src="./images/RCRS5000 (240x 45 px) scalable black.svg"
+                alt="RCRS5000"
+            />
+            </figure>
+            <ul class="nav__link--list">
+            <li class="nav__link" onclick="toggleModal()">
+                <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >About</a
+                >
+            </li>
+            <li class="nav__link">
+                <a
+                href="#projects"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Projects</a
+                >
+            </li>
+            <li class="nav__link" onclick="toggleModal()">
+                <a
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Contact</a
+                >
+            </li>
+            <li class="nav__link" onclick="toggleContrast()">
+                <a
+                class="adjust"
+                ><i class="fa-solid fa-circle-half-stroke"></i
+                ></a>
+            </li>
+            </ul>
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars menu__btn--icon"></i>
+            </button>
+        </div>
+        <div class="menu">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="menu__links">
+                <a class="menu__link link__hover-effect menu-link__hover--white menu-link__hover--black" onclick="closeMenu(), toggleModal()">About</a>
+                <a href="#projects" class="menu__link link__hover-effect menu-link__hover--white menu-link__hover--black" onclick="closeMenu()">Projects</a>
+                <a class="menu__link link__hover-effect menu-link__hover--white menu-link__hover--black" onclick="closeMenu(), toggleModal()">Contact Us</a>
+                <a href="#"
+                class="adjust menu_adjust" onclick="toggleContrast()"
+                ><i class="fa-solid fa-circle-half-stroke"></i
+                ></a>
+            </div>
+        </div>
+        </div>
       </nav>
       <header class="header">
         <div class="header__content">
@@ -97,9 +116,11 @@
           </div>
         </div>
       </header>
+      <a href="#">
       <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -253,8 +274,8 @@
                     <img class="footer__logo--img" src="./images/RCRS5000 white (240 x 45 px) scalable.svg" alt="footer logo">
                 </figure>
                 <div class="footer__social--list">
-                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" >Instagram</a>
-                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" >Tiktok</a>
+                    <a href="https://www.instagram.com/rcrs5000/" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white" >Instagram</a>
+                    <a href="https://tiktok.com/rcrs5000/" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white" >Tiktok</a>
                     <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" >Blog</a>
                     <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" onclick="toggleModal()">Contact Us</a>
                 </div>

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+html {
+    scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -109,10 +112,12 @@ button {
   transition: all 300ms ease;
 }
 
+.menu-link__hover--white:after,
 .link__hover-effect--white:after {
   background-color: white;
 }
 
+.menu-link__hover--black:after,
 .link__hover-effect--black:after {
   background-color: #242424;
 }
@@ -184,11 +189,14 @@ nav,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-circle-half-stroke,
-.dark-theme .header__para {
+.dark-theme .header__para,
+.dark-theme .btn__menu, 
+.dark-theme .menu__link{
   color: #fff;
 }
 
-.dark-theme section {
+.dark-theme section,
+.dark-theme .menu {
   background-color: #242424;
 }
 
@@ -201,13 +209,15 @@ nav,
 }
 
 .dark-theme .link__hover-effect--black:after,
-.dark-theme .scroll__icon:after {
+.dark-theme .scroll__icon:after,
+.dark-theme .menu-link__hover--black:after {
   background-color: #fff;
 }
 
 .dark-theme .mail__btn {
   background-color: #fff;
   color: #242424;
+  z-index: 50;
 }
 
 .dark-theme .title__img {
@@ -221,7 +231,7 @@ NAVIGATION
 
 */
 
-nav {
+nav .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -260,6 +270,75 @@ nav {
 .fa-circle-half-stroke:active {
   transform: scale(0.8);
 }
+
+/* 
+
+    BUTTON MENU
+
+*/
+.btn__menu {
+  background-color: transparent;
+  border: none;
+  display: none;
+  font-size: 1.3em;
+}
+
+.menu--open .menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 378px;
+  margin: 24px 16px;
+  padding: 32px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid #6f59ab;
+  border-radius: 8px;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(300%);
+  transition: all 300ms ease;
+}
+
+.btn__menu--close {
+  position: fixed;
+  top: 24px;
+  right: 18px;
+}
+
+.menu__links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__link {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+/* .menu-link__hover--white {
+    color: #242424;
+    font-weight: 700;
+    line-height: ; */
+}
+
+/* .menu-link__hover--black {
+
+} */
 
 /* 
 
@@ -465,10 +544,11 @@ nav {
   width: 100%;
   max-width: 1000px;
   padding: 0 30px;
+  z-index: 3;
 }
 
 .title__img {
-  height: 120px;
+  width: 100%;
 }
 
 .header__para {
@@ -629,6 +709,7 @@ PROJECTS
 */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -672,7 +753,6 @@ baseline placement outline for smaller svgs
 
 .shape {
   position: fixed;
-  z-index: 0;
 }
 .shape--0 {
   width: 100px;
@@ -739,4 +819,81 @@ baseline placement outline for smaller svgs
   left: 87vw;
   filter: brightness(0) saturate(100%) invert(45%) sepia(27%) saturate(1059%)
     hue-rotate(243deg) brightness(91%) contrast(94%);
+}
+/* 
+    
+    RESPONSIVENESS
+
+    */
+/* large phones, tablets */
+@media (max-width: 768px) {
+  .nav__link--list {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+  .menu_adjust {
+    margin-top: 12px ;
+  }
+  .logo-dark {
+    width: 80%;
+    max-width: 600px;
+  }
+  .title {
+    font-size: 80px;
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    border-radius: 0;
+  }
+  .modal__half {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .logo-dark {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+  .header__para {
+    font-size: 18px;
+  }
+  .project__description--para {
+    display: none;
+  }
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project__description--title {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .project__description--links {
+    margin-top: 14px;
+  }
+  .modal__half {
+    padding: 40px;
+  }
 }
