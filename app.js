@@ -54,11 +54,11 @@ function contact(event) {
       `Weg1xuw2LnYP_gJTQ`
     )
     .then(() => {
-      loading.classList.remove(` modal__overlay--visible`);
+      loading.classList.remove(`modal__overlay--visible`);
       success.classList += ` modal__overlay--visible`;
     })
     .catch(() => {
-      loading.classList.remove(` modal__overlay--visible`);
+      loading.classList.remove(`modal__overlay--visible`);
       alert(
         `The email service is temporarily unavailable. Please contact me directly at minisculebeta@gmail.com`
       );
