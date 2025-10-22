@@ -1,5 +1,5 @@
-// template id: template_c5lxgqk
-// service id: service_rcrs500worldwide
+// template id: template_rf15yco
+// service id: service_8q49l1e
 // user id: Weg1xuw2LnYP_gJTQ
 
 let isModalOpen = false;
@@ -48,8 +48,8 @@ function contact(event) {
   loading.classList += ` modal__overlay--visible`;
   emailjs
     .sendForm(
-      `service_rcrs500worldwide`,
-      `template_c5lxgqk`,
+      `service_8q49l1e`,
+      `template_rf15yco`,
       event.target,
       `Weg1xuw2LnYP_gJTQ`
     )
