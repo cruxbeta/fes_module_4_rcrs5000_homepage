@@ -55,7 +55,7 @@ function contact(event) {
     )
     .then(() => {
       loading.classList.remove(` modal__overlay--visible`);
-      success.body.classList += ` modal__overlay--visible`;
+      success.classList += ` modal__overlay--visible`;
     })
     .catch(() => {
       loading.classList.remove(` modal__overlay--visible`);
